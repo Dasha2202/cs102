@@ -1,5 +1,7 @@
 import math
 import random
+
+
 def multiplicative_inverse(a, b):
     vector = []
     c1 = max(a, b)
@@ -18,26 +20,26 @@ def multiplicative_inverse(a, b):
     return result[0][1] % c1
 
 
-def gcd(a, b): 
+def gcd(a, b):
     if b == 0:
         return a
     else:
         return gcd(b, a % b)
 
 
-def is_prime(n): 
+def is_prime(n):
     if n == 1:
         return False
-    numb = (math.sqrt(n)) 
+    numb = (math.sqrt(n))
     for i in range(2, int(numb + 3)):
         if i == n:
             break
-        if n % i == 0: 
+if n % i == 0:
             return False
-    return True
+return True
 
 
-def generate_keypair(p, q): 
+def generate_keypair(p, q):
     if not (is_prime(p) and is_prime(q)):
         raise ValueError('Both numbers must be prime.')
     elif p == q:
