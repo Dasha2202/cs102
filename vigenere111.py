@@ -13,7 +13,7 @@ def ecrypt_vigenere(ciphertext, keyword):
         ch = 0
         if ch_key >= 65 and ch_key <= 90:
                 ch = ch_key-65
-                elif ch_key >= 97 and ch_key <= 122:
+        elif ch_key >= 97 and ch_key <= 122:
                     ch = ch_key-97
         if ch_plain <= 90:
             ch_plain += ch
